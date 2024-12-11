@@ -1,5 +1,30 @@
 console.log('***** Music Collection *****')
 // Safe Zone -- Write code below this line
+function addToCollection(collection,title,artist,yearPublished){
+ const newAlbum = {
+  title: title,
+  artist:artist,
+  yearPublished: yearPublished
+ };
+ collection.push(newAlbum)
+ return newAlbum;
+};
+let myCollection = [];
+console.log(addToCollection(myCollection, 'Waqiah','Sudais',2002));
+console.log(addToCollection(myCollection, 'Rahmna','Sudais',2002));
+console.log(addToCollection(myCollection, 'Xadid','Sudais',2002));
+console.log(addToCollection(myCollection, 'Qamar','Sudais',2002));
+console.log(addToCollection(myCollection, 'Najam','Sudais',2002));
+console.log(addToCollection(myCollection, 'Dur','Sudais',2002));
+
+function showCollection(collection){
+for ( let i =0; i < collection.length; i++)
+  console.log(`${collection[i].title} by ${collection[i].artist} published in ${collection[i].yearPublished}`) 
+};
+
+
+
+
 
 
 
