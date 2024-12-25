@@ -11,7 +11,7 @@ function addToCollection(collection,title,artist,yearPublished){
 };
 let myCollection = [];
 console.log(addToCollection(myCollection, 'Waqiah','Sudais',2002));
-console.log(addToCollection(myCollection, 'Rahmna','Sudais',2002));
+console.log(addToCollection(myCollection, 'Rahman','Sudais',2002));
 console.log(addToCollection(myCollection, 'Xadid','Sudais',2002));
 console.log(addToCollection(myCollection, 'Qamar','Sudais',2002));
 console.log(addToCollection(myCollection, 'Najam','Sudais',2002));
@@ -22,6 +22,15 @@ for ( let i =0; i < collection.length; i++)
   console.log(`${collection[i].title} by ${collection[i].artist} published in ${collection[i].yearPublished}`) 
 };
 
+function findByArtist(collection, artist){
+  const matchingAlbums = [];
+  for(let i = 0;  i < collection.length; i++){
+    if(collection[i].artist === artist){
+      matchingAlbums.push(collection[i])
+    }
+  }
+  return matchingAlbums
+}
 
 
 
